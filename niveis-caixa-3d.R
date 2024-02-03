@@ -1,6 +1,6 @@
 # Makes a plot for Energy levels for a particle in a 3d box
 # Elmar Uhl - 2024
-
+ 
 # valor do xlim em plot deve ser melhorado porque não faz o ajuste automaticamente
 
 # Constants
