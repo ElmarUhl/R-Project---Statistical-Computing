@@ -1,6 +1,6 @@
 # R-Project Statistical-Computing
 Repository with R scripts
 
-# Commands
+# Usefu Commands
 
-*'''install.packages('package name')''' - install packages
+* ```install.packages('package name')``` - install packages
