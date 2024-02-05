@@ -1,10 +1,11 @@
 # Graficos de funçao de onda e densidade de probabilidade de partículas na caixa
 # Elmar de Oliveira Uhl - 2023
 
-n <- 100 # n do estado Obs: n = 0 não é um estado permitido
+n <- 3 # n do estado Obs: n = 0 não é um estado permitido
 l <- 1 # largura da caixa
+pi <- 3.141593
 
-x <- seq(0,l,0.01) # valores da abscissa
+x <- seq(0,l,0.001) # valores da abscissa
 
 # Calcula a função de onda
 psi <- function(x){
@@ -19,6 +20,8 @@ probability <- function(x) {
 
 plot(1, type='n', xlim=c(0,1), ylim=c(-2,2),xlab="x",ylab="psi") # Cria o grafico vazio
 abline(h=0,col="gray", lty=2)                                    # Desenha uma linha horizontal de referencia na origem
+abline(v=0, col="gray", lty=2)
+abline(v=l, col="gray", lty=2)
 lines(psi(x)~x, col="red",lwd=2)                                 # Desenha a função de onda
 lines(probability(x)~x, col="blue", lwd=2)                       # Desenha a densidade de probabilidade
 text(0, 2, paste("Estado n = ", n),pos=4)
