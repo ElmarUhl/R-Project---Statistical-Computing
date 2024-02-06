@@ -1,9 +1,11 @@
-# Wavefunction of a particle in a 2d box
+# Isosurfaces of a particle in a 3d box
 # Elmar Uhl - 2024
+
+library(misc3d) # library to create isosurface
 
 pi = 3.14
 
-# Quantum number nx and ny
+# Quantum number nx, ny and nz
 nx = 1
 ny = 1
 nz = 1
@@ -14,11 +16,13 @@ c = 1 # length of box in z
 
 # Wavefunction in a 3d box
 psi <- function(x,y,z) {
-    A = 2*sqrt(2)/sqrt(Lx*Ly*Lz)
-    A*sin(nx*pi*x/Lx)*sin(ny*pi*y/Ly)*sin(nz*pi*z/Lz)
+    A = 2*sqrt(2)/sqrt(a*b*c)
+    y = A*sin(nx*pi*x/a)*sin(ny*pi*y/b)*sin(nz*pi*z/c)
+    abs(y) # Foi inserido para a visualização de isosurfaces 
 }
 
-x <- y <- z <- seq(0.0,1.0,length=50)
-#z <- outer(x, y, psi)
+# Gera os valores de entrada em x, y, z
+x <- y <- z <- seq(0.0,1.0,length=100)
 
-#persp(x,y,z,col="light blue",theta=20,phi=35,shade=0.1,main="Wavefunction of particle in a 2d box",sub=paste("nx = ", nx, ", ny = ", ny))
+# Gera a isosurface
+contour3d(psi,0.5, x, y, z, color='red')
