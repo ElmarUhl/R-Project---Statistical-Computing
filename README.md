@@ -8,6 +8,10 @@ Repository with R scripts
 
 * ```install.packages('package name')``` - install packages
 
-## Running External R Scripts
+## Running R
 
-Type in R enviroment ```source('script_name.R')```
+In terminal command prompt type ```R``` to enter in R enviroment.
+
+### To Load External R Scripts
+
+Type in R enviroment ```source('script_name.R')``` to execute R script.
