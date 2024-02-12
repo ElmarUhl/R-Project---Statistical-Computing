@@ -4,6 +4,10 @@
 
 Repository with R scripts
 
-# Useful Commands
+## Useful Commands
 
 * ```install.packages('package name')``` - install packages
+
+## Running External R Scripts
+
+Type in R enviroment ```source('script_name.R')```
