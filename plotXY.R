@@ -33,3 +33,38 @@ for (i in 1:N) {
 for (i in 1:N) {
     if (select_points[i]) points(x_random[i],y_random[i], col="red")
 }
+
+perceptron <- function(n,learningRate=0.0001) {
+    weigths <- c()
+    bias <- 1
+    for (i in 1:n) {
+        weigths <- c(weigths, runif(1,min=-1,max=1))
+    }
+    return(weigths)
+}
+
+weigths <- perceptron(10)
+print(weigths)
+
+inp <- rep(1,10)
+activate <- function(inputs) {
+    temp <- inputs*weigths
+    temp2 <- sum(temp)
+    
+    print(temp2)
+    
+    if (temp2 > 0) {
+        return(1)
+    }
+    else {
+        return(0)
+    }
+}
+
+active <- activate(inp)
+print(active)
+
+treino <- function(inputs, desired) {
+    guess <- activate(inputs)
+    error <- desired - inputs
+}
