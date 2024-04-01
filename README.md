@@ -15,3 +15,7 @@ In terminal command prompt type ```R``` to enter in R enviroment.
 ### To Load External R Scripts
 
 Type in R enviroment ```source('script_name.R')``` to execute R script.
+
+## Useful Links
+
+[R Project Homepage](https://www.r-project.org/)
